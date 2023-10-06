@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, meu nome é</h3>
+            <h1>Daiane dos Santos</h1>
+            <h3  class="multiple-text">E sou uma <span> Desenvolvedora Web</span></h3>
+            <p>Tenho 32 anos, moro em Salvador Bahia, sou dedicada, resiliente e prezo pelo bem estar de todos. Gosto de ler, fazer caminhada e desvendar o mundo da tecnologia. Gosto de trabalhar em equipe, conhecer novas pessos e desenvolver um trabalho eficaz e honesto.</p>
+            <div class="midia-social">
+                <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bx-envelope' ></i></a>
+            </div>
+            <a href="https://daianedossantos.github.io/curriculo/" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="imagem/Eu (1).jpg" alt="">
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="sobre" id="sobre">
+        <div class="sobre-img">
+            <img src="imagem/Eu2.jpg" alt="">
+        </div>
+
+        <div class="sobre-content">
+            <h2 class="cabecalho">Sobre <span>Mim</span></h2>
+            <h3>Desenvolvedora web</h3>
+            <p>Errei... Recomecei e aprendi! Errar, recomeçar e aprender faz parte do caminho para alcançar grandes conquistas. A perseverança e a vontade de aprender com os erros são qualidades essenciais para atingir nossos objetivos. Continuo seguindo em frente  com dedicação e humildade, trabalhando muito para alcançar lugares altos.</p>
+            <a href="#" class="btn">Consulte mais informação</a>
+        </div>
+    </section>
+
+    <!-- services section desing -->
+    <section class="servicos" id="servicos">
+        <h2 class="cabecalho">Meus <span>Serviços</span></h2>
+
+        <div class="servicos-container">
+            <div class="servicos-box">
+                <i class='bx bxl-html5' ></i>
+                <h3>HTML</h3>
+                <p>Em breve</p>
+                <a href="#" class="btn">Mais informações</a>
+            </div>
+
+        <div class="servicos-box">
+            <i class='bx bxl-css3' ></i>
+            <h3>CSS</h3>
+            <p>Em breve</p>
+            <a href="#" class="btn">Mais informações</a>
+        </div>
+
+        <div class="servicos-box">
+            <i class='bx bxl-javascript' ></i>
+            <h3>JAVASCRIPT</h3>
+            <p>Em Breve</p>
+            <a href="#" class="btn">Mais informações</a>
+        </div> 
+
+        
+        </div>
+    </section>
+
+    <!-- portfolio section design-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="cabecalho">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="imagem/img-meu primeiro site.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Projeto 1</h4>
+                    <p>Meu Primeiro Site</p>
+                    <a href="https://daianedossantos.github.io/Meu--Primeiro--site/"><i class='bx bx-link-external'>Clique aqui</i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="imagem/img-cardapio.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Projeto 2</h4>
+                    <p>Cardapio</p>
+                    <a href="https://daianedossantos.github.io/Cardapio/"><i class='bx bx-link-external'></i>Clique aqui</i></a>
+                </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="imagem/Tela login.png" alt="">
+            <div class="portfolio-layer">
+                <h4>Projeto 3</h4>
+                <p>Tela de login</p>
+                <a href="https://daianedossantos.github.io/Tela-login/"><i class='bx bx-link-external'>Clique aqui</i></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contato section design -->
+    <section class="contato" id="contato">
+        <h2 class="cabecalho">Contate <span>Me!</span></h2>
+
+        <form action="https://formsubmit.co/daiane220691@gmail.com" method="POST">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" required />
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="message" placeholder="Escreva aqui"></textarea>
+            <input type="hidden" name="_capcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    
+        <!-- footer design -->
+        <footer class="footer">
+
+        
+            <div class="footer-tex">
+                <p>Copyright: Daiane dos Santos</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+        </footer>
+
+
+     <!--scroll reveal-->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+     <!-- typed js -->
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    
+    <!-- custom js -->
+    <script defer src="js/main.js"></script>
+</body>
+</html>

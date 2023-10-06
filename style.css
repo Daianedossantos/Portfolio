@@ -1,0 +1,478 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins' , sans-serif;
+}
+
+:root {
+    --bg-color: black;
+    --second-bg-color: #081b29;
+    --text-color: white;
+    --main-color: purple;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: white;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo{
+    position: fixed;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+} 
+.navbar a {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--is));
+    cursor: default;
+}
+.navbar a:hover,
+.navbar a.active {
+    color:  var(--main-color);
+}
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-img img {
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.home-content h3 {
+    animation: inicializa .7s forwards;
+    font-size: 3.2rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+    
+span {
+    color: purple;
+}
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    animation: slideBottom 1s ease forwards;
+
+
+}
+.home-content p {
+    font-size: 1.6rem;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+
+}
+.midia-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid purple;
+    border-radius: 50%;
+    font-size: 50px;
+    font-size: 2rem;
+    color: purple;
+    margin: 3rem 1.5rem 3rem 0;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.midia-social a:hover{
+    background: purple;
+    color: black;
+    box-shadow: 0 0 20px purple;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: purple;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px purple,
+    0 0 25px purple
+}
+.btn:hover {
+    box-shadow: 0 0 5px darkviolet,
+    0 0 25px darkviolet, 0 0 50px darkviolet,
+    0 0 100px darkviolet, 0 0 200px darkviolet
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.sobre-img img {
+    width: 35vh;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-22.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cabecalho {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.sobre-content {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.sobre-content h3 {
+    font-size: 2.6rem;
+}
+
+.sobre-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.servicos  h2 {
+    margin-bottom: 5rem;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.servicos-container .servicos-box {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    font-size: 13px;
+    border-right: 10px;
+    border-radius: 2rem;
+    transform: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px darkviolet;
+    text-align: center;
+    border: 2rem solid var(--bg-color);
+    transition: .5S ease;
+}
+
+.servicos-container .servicos-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.servicos-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.servicos-box h3 {
+    font-size: 2.6rem;
+}
+.servicos-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.portfolio {
+    background: var(--second-bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    display: inline-block;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px;
+    font-weight: 5px;
+    border-right: 3px;
+    border-radius: 20px;
+    transform: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px black,
+              1px 1px 40px darkviolet
+    
+}
+
+
+.portfolio-box img {
+    width: 310px;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.contato h2 {
+    margin-bottom: 3rem;
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contato form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.contato form .input-box input {
+    width: 49%;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 16px;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem darkviolet;
+}
+
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: black;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+    display: block;
+    width: 100%;
+}
+
+.form label{
+    color: darkviolet;
+}
+
+/* BREAKPOINTTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+}
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid darkviolet;
+    box-shadow: 0 .5rem 1rem #081b29;
+}
+
+@keyframes inicializar {
+    form {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0,);
+    }
+}
+
+
+@keyframes slideRight {
+    0% {
+       transform: translateX(-100px);
+       opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }   
+}
+
+
+
+@keyframes slideTop {
+    0% {
+       transform: translatey(-100px);
+       opacity: 0;
+    }
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+
+   }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100% {
+         transform: translatey(0px);
+         opacity: 1;
+   }
+}
+
